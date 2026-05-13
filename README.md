@@ -4,11 +4,13 @@ A React component library for data-heavy interfaces. Dense by default. Accessibl
 
 > Most component libraries are designed for marketing pages: generous spacing, rounded everything, default sizes that assume one button per screen. `dense-ui` is designed for dashboards, admin panels, operational tooling, and interfaces where the user is an operator.
 
-**[Docs and live examples ->](https://dense-ui.dev)** · **[Powering SpendBoard ->](https://github.com/codejupiter/Spendboard)**
+**[Docs and live examples ->](https://dense-ui.vercel.app)** · **[Powering SpendBoard ->](https://github.com/codejupiter/Spendboard)**
 
 ```bash
 npm install dense-ui
 ```
+
+> Package name is available on npm. Publish with `npm publish --access public` when you are ready to make the package public.
 
 ```tsx
 import { Button, Input, Table } from "dense-ui"

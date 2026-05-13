@@ -1,0 +1,32 @@
+import { defineConfig } from 'tsup'
+
+export default defineConfig({
+  entry: {
+    index: 'src/index.ts',
+    button: 'src/button.tsx',
+    input: 'src/input.tsx',
+    select: 'src/select.tsx',
+    combobox: 'src/combobox.tsx',
+    checkbox: 'src/checkbox.tsx',
+    radio: 'src/radio.tsx',
+    switch: 'src/switch.tsx',
+    table: 'src/table.tsx',
+    badge: 'src/badge.tsx',
+    tooltip: 'src/tooltip.tsx',
+    popover: 'src/popover.tsx',
+    dialog: 'src/dialog.tsx',
+    toast: 'src/toast.tsx',
+    tabs: 'src/tabs.tsx',
+    'command-palette': 'src/command-palette.tsx',
+    theme: 'src/theme.tsx',
+  },
+  clean: true,
+  dts: true,
+  external: ['react', 'react-dom'],
+  format: ['esm', 'cjs'],
+  minify: true,
+  sourcemap: true,
+  splitting: false,
+  treeshake: true,
+  tsconfig: 'tsconfig.build.json',
+})

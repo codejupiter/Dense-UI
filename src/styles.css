@@ -1,0 +1,556 @@
+.dui-theme,
+:root {
+  --dui-bg: #fbfbf8;
+  --dui-fg: #171b17;
+  --dui-muted: #667066;
+  --dui-soft: #858f84;
+  --dui-surface: #ffffff;
+  --dui-surface-2: #f0f2ec;
+  --dui-border: #d9ded3;
+  --dui-border-strong: #c6cdc0;
+  --dui-accent: #166b4f;
+  --dui-accent-fg: #ffffff;
+  --dui-accent-soft: #dff1e8;
+  --dui-info: #286aa8;
+  --dui-info-soft: #e2edf8;
+  --dui-success: #176b4d;
+  --dui-success-soft: #e0f1e8;
+  --dui-warning: #8b6417;
+  --dui-warning-soft: #f7edd5;
+  --dui-danger: #ae3d34;
+  --dui-danger-soft: #f8e1df;
+  --dui-radius: 5px;
+  --dui-font-size: 12px;
+  --dui-control-h: 28px;
+  --dui-control-pad-x: 9px;
+  --dui-gap: 6px;
+  --dui-shadow: 0 14px 32px rgba(21, 28, 22, 0.14);
+  color: var(--dui-fg);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: var(--dui-font-size);
+}
+
+.dui-theme[data-theme="dark"],
+[data-theme="dark"].dui-theme {
+  --dui-bg: #111410;
+  --dui-fg: #eef3eb;
+  --dui-muted: #a3aca0;
+  --dui-soft: #747f72;
+  --dui-surface: #181d17;
+  --dui-surface-2: #222820;
+  --dui-border: #30382d;
+  --dui-border-strong: #434d3f;
+  --dui-accent: #66c493;
+  --dui-accent-fg: #0d1710;
+  --dui-accent-soft: #173624;
+  --dui-info: #82b7ec;
+  --dui-info-soft: #172b3b;
+  --dui-success: #6ed19a;
+  --dui-success-soft: #173624;
+  --dui-warning: #e1bb6c;
+  --dui-warning-soft: #3b2f18;
+  --dui-danger: #ef8a7f;
+  --dui-danger-soft: #40221f;
+  --dui-shadow: 0 14px 32px rgba(0, 0, 0, 0.38);
+}
+
+.dui-theme[data-density="1"] {
+  --dui-font-size: 11px;
+  --dui-control-h: 24px;
+  --dui-control-pad-x: 7px;
+  --dui-gap: 4px;
+}
+
+.dui-theme[data-density="3"] {
+  --dui-font-size: 13px;
+  --dui-control-h: 32px;
+  --dui-control-pad-x: 11px;
+  --dui-gap: 8px;
+}
+
+.dui-theme[data-density="4"] {
+  --dui-font-size: 14px;
+  --dui-control-h: 36px;
+  --dui-control-pad-x: 13px;
+  --dui-gap: 10px;
+}
+
+.dui-button,
+.dui-input,
+.dui-select-trigger,
+.dui-select-option,
+.dui-command-item,
+.dui-tabs-trigger {
+  min-width: 0;
+  border: 1px solid var(--dui-border);
+  border-radius: var(--dui-radius);
+  font: inherit;
+  outline: none;
+}
+
+.dui-button,
+.dui-select-trigger,
+.dui-select-option,
+.dui-command-item,
+.dui-tag button,
+.dui-tabs-trigger {
+  cursor: pointer;
+}
+
+.dui-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--dui-gap);
+  height: var(--dui-control-h);
+  padding: 0 var(--dui-control-pad-x);
+  white-space: nowrap;
+}
+
+.dui-button-sm {
+  height: calc(var(--dui-control-h) - 4px);
+  padding: 0 calc(var(--dui-control-pad-x) - 2px);
+}
+
+.dui-button-lg {
+  height: calc(var(--dui-control-h) + 6px);
+  padding: 0 calc(var(--dui-control-pad-x) + 3px);
+}
+
+.dui-button-primary {
+  border-color: var(--dui-accent);
+  color: var(--dui-accent-fg);
+  background: var(--dui-accent);
+}
+
+.dui-button-secondary {
+  color: var(--dui-fg);
+  background: var(--dui-surface);
+}
+
+.dui-button-ghost {
+  border-color: transparent;
+  color: var(--dui-muted);
+  background: transparent;
+}
+
+.dui-button:hover,
+.dui-select-trigger:hover,
+.dui-tabs-trigger:hover {
+  filter: brightness(0.98);
+}
+
+.dui-button:focus-visible,
+.dui-input:focus-visible,
+.dui-select-trigger:focus-visible,
+.dui-checkbox:focus-visible,
+.dui-radio:focus-visible,
+.dui-switch:focus-visible,
+.dui-tabs-trigger:focus-visible,
+.dui-command-item[aria-selected="true"] {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--dui-accent) 24%, transparent);
+}
+
+.dui-input {
+  width: 100%;
+  min-height: var(--dui-control-h);
+  padding: 0 var(--dui-control-pad-x);
+  color: var(--dui-fg);
+  background: var(--dui-surface);
+}
+
+.dui-input::placeholder {
+  color: var(--dui-soft);
+}
+
+.dui-textarea {
+  min-height: 74px;
+  padding-top: 7px;
+  resize: vertical;
+}
+
+.dui-select-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 220px;
+  height: var(--dui-control-h);
+  padding: 0 var(--dui-control-pad-x);
+  color: var(--dui-fg);
+  background: var(--dui-surface);
+}
+
+.dui-select-trigger span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dui-popover,
+.dui-dialog,
+.dui-command-dialog,
+.dui-toast {
+  border: 1px solid var(--dui-border);
+  border-radius: 8px;
+  color: var(--dui-fg);
+  background: var(--dui-surface);
+  box-shadow: var(--dui-shadow);
+}
+
+.dui-select-content,
+.dui-command-popover {
+  width: 260px;
+  padding: 6px;
+}
+
+.dui-select-search,
+.dui-command-input {
+  width: 100%;
+  height: var(--dui-control-h);
+  padding: 0 var(--dui-control-pad-x);
+  border: 1px solid var(--dui-border);
+  border-radius: var(--dui-radius);
+  color: var(--dui-fg);
+  background: var(--dui-surface-2);
+  font: inherit;
+  outline: none;
+}
+
+.dui-select-list,
+.dui-command-list {
+  max-height: 260px;
+  margin-top: 6px;
+  overflow: auto;
+}
+
+.dui-select-option,
+.dui-command-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: var(--dui-control-h);
+  padding: 0 var(--dui-control-pad-x);
+  border-color: transparent;
+  color: var(--dui-fg);
+  background: transparent;
+  text-align: left;
+}
+
+.dui-select-option:hover,
+.dui-command-item:hover,
+.dui-command-item[aria-selected="true"] {
+  background: var(--dui-surface-2);
+}
+
+.dui-select-option:disabled,
+.dui-command-item[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.dui-empty {
+  padding: 10px;
+  color: var(--dui-muted);
+  text-align: center;
+}
+
+.dui-command {
+  width: 100%;
+}
+
+.dui-checkbox,
+.dui-radio {
+  display: inline-grid;
+  width: 16px;
+  height: 16px;
+  place-items: center;
+  padding: 0;
+  color: var(--dui-accent-fg);
+  background: var(--dui-surface);
+}
+
+.dui-checkbox[data-state="checked"] {
+  border-color: var(--dui-accent);
+  background: var(--dui-accent);
+}
+
+.dui-radio {
+  border-radius: 999px;
+}
+
+.dui-radio[data-state="checked"] {
+  border-color: var(--dui-accent);
+}
+
+.dui-radio-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--dui-accent);
+}
+
+.dui-switch {
+  position: relative;
+  width: 34px;
+  height: 18px;
+  padding: 0;
+  border: 1px solid var(--dui-border);
+  border-radius: 999px;
+  background: var(--dui-border-strong);
+}
+
+.dui-switch[data-state="checked"] {
+  background: var(--dui-accent);
+}
+
+.dui-switch-thumb {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--dui-surface);
+  transform: translateX(1px);
+  transition: transform 120ms ease;
+}
+
+.dui-switch[data-state="checked"] .dui-switch-thumb {
+  transform: translateX(17px);
+}
+
+.dui-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--dui-border);
+  border-radius: 8px;
+  background: var(--dui-surface);
+  font-variant-numeric: tabular-nums;
+}
+
+.dui-th,
+.dui-td {
+  height: 30px;
+  padding: 0 8px;
+  border-bottom: 1px solid var(--dui-border);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.dui-th {
+  color: var(--dui-muted);
+  background: var(--dui-surface-2);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.dui-tr:hover .dui-td {
+  background: color-mix(in srgb, var(--dui-surface-2) 72%, transparent);
+}
+
+.dui-badge,
+.dui-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 22px;
+  padding: 0 7px;
+  border-radius: var(--dui-radius);
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.dui-tag button {
+  display: inline-grid;
+  width: 16px;
+  height: 16px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  color: currentColor;
+  background: transparent;
+}
+
+.dui-badge-neutral {
+  color: var(--dui-muted);
+  background: var(--dui-surface-2);
+}
+
+.dui-badge-success {
+  color: var(--dui-success);
+  background: var(--dui-success-soft);
+}
+
+.dui-badge-warning {
+  color: var(--dui-warning);
+  background: var(--dui-warning-soft);
+}
+
+.dui-badge-danger {
+  color: var(--dui-danger);
+  background: var(--dui-danger-soft);
+}
+
+.dui-badge-info {
+  color: var(--dui-info);
+  background: var(--dui-info-soft);
+}
+
+.dui-tooltip {
+  max-width: 240px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  color: var(--dui-surface);
+  background: var(--dui-fg);
+  font-size: 11px;
+}
+
+.dui-dialog-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(10, 14, 12, 0.32);
+}
+
+.dui-dialog,
+.dui-command-dialog {
+  position: fixed;
+  top: 18%;
+  left: 50%;
+  z-index: 60;
+  width: min(420px, calc(100vw - 32px));
+  padding: 14px;
+  transform: translateX(-50%);
+}
+
+.dui-command-dialog {
+  padding: 6px;
+}
+
+.dui-dialog-title {
+  margin: 0;
+  font-size: 15px;
+}
+
+.dui-dialog-description {
+  margin: 6px 0 0;
+  color: var(--dui-muted);
+}
+
+.dui-dialog-body {
+  margin-top: 14px;
+}
+
+.dui-toast-viewport {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 70;
+  display: grid;
+  gap: 8px;
+  width: 320px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dui-toast {
+  padding: 10px 12px;
+}
+
+.dui-toast-title {
+  font-weight: 700;
+}
+
+.dui-toast-description {
+  margin-top: 4px;
+  color: var(--dui-muted);
+}
+
+.dui-tabs-list {
+  display: inline-flex;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid var(--dui-border);
+  border-radius: 7px;
+  background: var(--dui-surface-2);
+}
+
+.dui-tabs-trigger {
+  height: calc(var(--dui-control-h) - 4px);
+  padding: 0 9px;
+  border-color: transparent;
+  color: var(--dui-muted);
+  background: transparent;
+}
+
+.dui-tabs-trigger[data-state="active"] {
+  color: var(--dui-fg);
+  background: var(--dui-surface);
+  box-shadow: 0 1px 2px rgba(12, 18, 13, 0.08);
+}
+
+.docs-shell {
+  min-height: 100vh;
+  padding: 28px;
+  background: var(--dui-bg);
+}
+
+.docs-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1120px;
+  margin: 0 auto 18px;
+}
+
+.docs-header h1,
+.docs-panel h2 {
+  margin: 0;
+}
+
+.docs-header h1 {
+  font-size: 24px;
+}
+
+.docs-header p {
+  margin: 6px 0 0;
+  color: var(--dui-muted);
+}
+
+.docs-actions,
+.docs-row {
+  display: flex;
+  align-items: center;
+  gap: var(--dui-gap);
+}
+
+.docs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.docs-panel {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  padding: 14px;
+  border: 1px solid var(--dui-border);
+  border-radius: 10px;
+  background: var(--dui-surface);
+}
+
+.docs-panel.wide {
+  grid-column: 1 / -1;
+}
+
+.docs-panel h2 {
+  font-size: 14px;
+}

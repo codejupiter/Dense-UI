@@ -6,6 +6,8 @@ A React component library for data-heavy interfaces. Dense by default. Accessibl
 
 **[Docs and live examples ->](https://dense-ui.vercel.app)** · **[Powering SpendBoard ->](https://github.com/codejupiter/Spendboard)**
 
+![dense-ui docs and live component preview](docs/screenshots/dense-ui-docs-light.png)
+
 ```bash
 npm install dense-ui
 ```
@@ -46,6 +48,8 @@ The opinions are:
 **Overlay:** Popover, Dialog, Toast
 
 **Navigation:** Tabs, CommandPalette
+
+![dense-ui dark mode component preview](docs/screenshots/dense-ui-components-dark.png)
 
 ## Design Principles
 

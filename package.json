@@ -107,6 +107,7 @@
     "dev": "storybook dev -p 6006",
     "playground": "vite",
     "build": "tsup && node scripts/copy-styles.mjs",
+    "build:docs": "vite build",
     "build:storybook": "storybook build",
     "lint": "eslint .",
     "size": "size-limit",

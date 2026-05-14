@@ -82,7 +82,8 @@ Dialog, Popover, Tooltip, Toast, Tabs, Checkbox, Radio, and Switch are built on 
 | Area | Choice |
 |---|---|
 | Build | tsup |
-| Dev/docs | Storybook + Vite |
+| Public docs | Vite playground deployed to Vercel |
+| Component QA | Storybook |
 | Language | TypeScript with declaration files |
 | Primitives | Radix UI |
 | Styling | Shipped CSS file with CSS variables |
@@ -105,14 +106,23 @@ The Select number includes Radix Popover and icon dependencies. That budget is i
 
 ```bash
 npm install
+npm run playground
+```
+
+The public docs playground runs at `http://localhost:5173`.
+
+Run Storybook for component QA:
+
+```bash
 npm run dev
 ```
 
 Storybook runs at `http://localhost:6006`.
 
-Build the library:
+Build the deployed docs and the library:
 
 ```bash
+npm run build:docs
 npm run build
 npm run size
 ```

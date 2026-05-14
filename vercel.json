@@ -1,4 +1,5 @@
 {
-  "buildCommand": "npm run build:storybook",
-  "outputDirectory": "storybook-static"
+  "framework": "vite",
+  "buildCommand": "npm run build:docs",
+  "outputDirectory": "dist"
 }

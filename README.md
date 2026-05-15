@@ -4,7 +4,7 @@ A React component library for data-heavy interfaces. Dense by default. Accessibl
 
 > Most component libraries are designed for marketing pages: generous spacing, rounded everything, default sizes that assume one button per screen. `dense-ui` is designed for dashboards, admin panels, operational tooling, and interfaces where the user is an operator.
 
-**[Docs and live examples ->](https://dense-ui.vercel.app)** · **[Powering SpendBoard ->](https://github.com/codejupiter/Spendboard)**
+**[Docs and live examples ->](https://dense-ui.vercel.app)** · **[API](docs/API.md)** · **[Accessibility](docs/ACCESSIBILITY.md)** · **[Powering SpendBoard ->](https://github.com/codejupiter/Spendboard)**
 
 ![dense-ui docs and live component preview](docs/screenshots/dense-ui-docs-light.png)
 
@@ -51,6 +51,18 @@ The opinions are:
 
 ![dense-ui dark mode component preview](docs/screenshots/dense-ui-components-dark.png)
 
+## Package Surface
+
+`dense-ui` supports both root imports and direct component entry points:
+
+```tsx
+import { Button, Table } from "dense-ui"
+import { Button as DirectButton } from "dense-ui/button"
+import "dense-ui/styles.css"
+```
+
+The package publishes ESM, CJS, TypeScript declarations, and `styles.css`. See [API.md](docs/API.md) for the full export map, component inventory, theme contract, and publishing checklist.
+
 ## Design Principles
 
 ### Dense Is The Default
@@ -80,6 +92,8 @@ Themes are CSS variable layers. You can theme a whole app or a single subtree:
 ### Accessibility Is The Floor
 
 Dialog, Popover, Tooltip, Toast, Tabs, Checkbox, Radio, and Switch are built on Radix primitives. The custom Select and Combobox avoid native `<select>` so they can support large option lists and searchable workflows.
+
+Accessibility expectations, consumer responsibilities, and QA notes are documented in [ACCESSIBILITY.md](docs/ACCESSIBILITY.md).
 
 ## Stack
 
@@ -129,6 +143,19 @@ Build the deployed docs and the library:
 npm run build:docs
 npm run build
 npm run size
+```
+
+Full local verification:
+
+```bash
+npm run lint
+npm run typecheck
+npm run test
+npm run build
+npm run build:docs
+npm run size
+npm run smoke
+npm pack --dry-run
 ```
 
 ## Publishing

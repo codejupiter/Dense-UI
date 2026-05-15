@@ -4,12 +4,30 @@
   "version": "0.0.0",
   "description": "Dense-by-default React components for data-heavy interfaces.",
   "license": "MIT",
+  "homepage": "https://dense-ui.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codejupiter/Dense-UI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/codejupiter/Dense-UI/issues"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "design-system",
+    "dashboard",
+    "typescript",
+    "radix-ui",
+    "data-heavy-ui"
+  ],
   "type": "module",
   "sideEffects": [
     "**/*.css"
   ],
   "files": [
     "dist",
+    "docs",
     "README.md"
   ],
   "main": "./dist/index.cjs",
@@ -107,15 +125,18 @@
     "dev": "storybook dev -p 6006",
     "playground": "vite",
     "build": "tsup && node scripts/copy-styles.mjs",
-    "build:docs": "vite build",
+    "build:docs": "vite build --outDir docs-dist",
     "build:storybook": "storybook build",
     "lint": "eslint .",
     "typecheck": "tsc -b --pretty false",
     "test": "vitest run",
     "test:watch": "vitest",
+    "smoke": "playwright test",
+    "smoke:ui": "playwright test --ui",
     "size": "size-limit",
     "changeset": "changeset",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "preview:docs": "vite preview --outDir docs-dist"
   },
   "peerDependencies": {
     "react": ">=18",
@@ -140,6 +161,7 @@
   "devDependencies": {
     "@changesets/cli": "^2.31.0",
     "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.60.0",
     "@size-limit/preset-small-lib": "^12.1.0",
     "@storybook/react-vite": "^10.3.6",
     "@testing-library/jest-dom": "^6.9.1",

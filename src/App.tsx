@@ -66,7 +66,7 @@ function App() {
   )
 
   return (
-    <ThemeProvider className="docs-shell" density={density} theme={theme}>
+    <ThemeProvider className="docs-shell" data-testid="docs-shell" density={density} theme={theme}>
       <ToastProvider>
         <header className="docs-topbar">
           <a className="docs-brand" href="https://github.com/codejupiter/Dense-UI">
@@ -113,7 +113,7 @@ function App() {
               </div>
             </div>
 
-            <section className="docs-console" aria-label="Live dense-ui preview">
+            <section className="docs-console" aria-label="Live dense-ui preview" data-testid="live-preview">
               <div className="console-head">
                 <span>Spend review</span>
                 <div>
@@ -291,6 +291,7 @@ import "dense-ui/styles.css"`}</code></pre>
                 { label: 'Density 3', value: '3' },
                 { label: 'Density 4', value: '4' },
               ]}
+              placeholder="Density"
               value={String(density)}
               onValueChange={(value) => setDensity(Number(value) as 1 | 2 | 3 | 4)}
             />

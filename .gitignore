@@ -9,9 +9,12 @@ lerna-debug.log*
 
 node_modules
 dist
+docs-dist
 dist-ssr
 storybook-static
 .vercel
+playwright-report
+test-results
 *.local
 
 # Editor directories and files

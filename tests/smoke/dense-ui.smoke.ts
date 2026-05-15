@@ -27,7 +27,7 @@ test('exercises overlay primitives without breaking focus-driven workflows', asy
   await expect(page.getByPlaceholder('Search commands')).toBeVisible()
   await page.getByPlaceholder('Search commands').fill('save')
   await page.getByText('Save current view').click()
-  await expect(page.getByText('View saved')).toBeVisible()
+  await expect(page.locator('.dui-toast-title').filter({ hasText: 'View saved' })).toBeVisible()
 })
 
 test('keeps the dense documentation layout responsive', async ({ page }) => {

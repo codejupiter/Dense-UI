@@ -1,7 +1,7 @@
 {
   "name": "dense-ui",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Dense-by-default React components for data-heavy interfaces.",
   "license": "MIT",
   "homepage": "https://dense-ui.vercel.app",
@@ -28,6 +28,8 @@
   "files": [
     "dist",
     "docs",
+    "CHANGELOG.md",
+    "LICENSE",
     "README.md"
   ],
   "main": "./dist/index.cjs",

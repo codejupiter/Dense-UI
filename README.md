@@ -4,7 +4,7 @@ A React component library for data-heavy interfaces. Dense by default. Accessibl
 
 > Most component libraries are designed for marketing pages: generous spacing, rounded everything, default sizes that assume one button per screen. `dense-ui` is designed for dashboards, admin panels, operational tooling, and interfaces where the user is an operator.
 
-**[Docs and live examples ->](https://dense-ui.vercel.app)** · **[API](docs/API.md)** · **[Accessibility](docs/ACCESSIBILITY.md)** · **[Powering SpendBoard ->](https://github.com/codejupiter/Spendboard)**
+**[Docs and live examples ->](https://dense-ui.vercel.app)** · **[API](docs/API.md)** · **[Accessibility](docs/ACCESSIBILITY.md)** · **[Release notes](docs/releases/dense-ui-v0.1.0.md)** · **[Powering SpendBoard ->](https://github.com/codejupiter/Spendboard)**
 
 ![dense-ui docs and live component preview](docs/screenshots/dense-ui-docs-light.png)
 
@@ -62,6 +62,8 @@ import "dense-ui/styles.css"
 ```
 
 The package publishes ESM, CJS, TypeScript declarations, and `styles.css`. See [API.md](docs/API.md) for the full export map, component inventory, theme contract, and publishing checklist.
+
+Release readiness is tracked in [RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md), with release history in [CHANGELOG.md](CHANGELOG.md) and security reporting in [SECURITY.md](SECURITY.md).
 
 ## Design Principles
 
@@ -157,6 +159,8 @@ npm run size
 npm run smoke
 npm pack --dry-run
 ```
+
+Before publishing or creating a GitHub release, run the [release checklist](docs/RELEASE_CHECKLIST.md).
 
 ## Publishing
 
